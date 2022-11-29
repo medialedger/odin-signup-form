@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Sign up form</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com"> 
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+	<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<header>
+		<img width="390" height="230" src="img/form-bg-m.webp" alt="background image">
+		<div class="logo">
+			<svg width="744" height="168"><title>Dev logo</title><use href="#logo"></use></svg>
+		</div>
+	</header>
+	<main>
+		<section class="intro">
+			<p>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams. Sign up now to get started.</p>
+			<p>You know you want to.</p>
+		</section>
+		<form action="#">
+			<div class="stripe">
+				<h2>Let’s do this!</h2>
+				<ul>
+					<li>
+						<label for="firstName">First Name</label>
+						<input type="text" name="firstName" id="firstName" required autocomplete="given-name" placeholder="First Name">
+						<span class="valid"></span>
+						<span class="required"></span>
+					</li>
+					<li>
+						<label for="lastName">Last Name</label>
+						<input type="text" name="lastName" id="lastName" required autocomplete="family-name" placeholder="Last Name">
+						<span class="valid"></span>
+						<span class="required"></span>
+					</li>
+					<li>
+						<label for="email">Email</label>
+						<input type="email" name="email" id="email" required autocomplete="email" placeholder="Email">
+						<span class="valid"></span>
+						<span class="required"></span>
+					</li>
+					<li>
+						<label for="phone">Phone Number</label>
+						<input type="tel" name="phone" id="phone" required autocomplete="tel" placeholder="Phone Number" minlength="7">
+						<span class="valid"></span>
+						<span class="required"></span>
+					</li>
+					<li>
+						<label for="password">Password</label>
+						<input type="password" name="password" id="password" required autocomplete="new-password" placeholder="Password" minlength="8" aria-describedby="password-hint">
+						<p id="password-hint">Minimum of 8 characters. May include uppercase, lowercase and special characters.</p>
+						<span class="valid"></span>
+						<span class="required"></span>
+					</li>
+					<li>
+						<label for="passwordConfirm">Confirm Password</label>
+						<input type="password" name="passwordConfirm" id="passwordConfirm" required autocomplete="new-password" placeholder="Confirm Passsword" minlength="8">
+						<span class="valid"></span>
+						<span class="required"></span>
+						<p class="error" hidden>Uh-oh…passwords no not match!</p>
+					</li>
+				</ul>
+			</div>
+			<div class="cta-box">
+				<button type="submit">Create Account</button>
+				<p>Already have an account? <a href="#">Log in</a></p>
+			</div>
+		</form>
+	</main>
+	<svg xmlns="http://www.w3.org/2000/svg" style="display: none;" aria-hidden="true">
+		<symbol id="logo" viewBox="0 0 744 168">
+			<path d="M37.814,87.188l70.333,33.384c3.962,1.872 6.735,3.727 8.319,5.564c1.585,1.836 2.377,4.051 2.377,6.644c-0,3.025 -0.936,5.474 -2.809,7.347c-1.873,1.872 -4.358,2.809 -7.455,2.809c-1.296,-0 -2.719,-0.216 -4.267,-0.649c-1.549,-0.432 -3.44,-1.152 -5.672,-2.16l-85.135,-39.219c-0.432,-0.216 -1.117,-0.504 -2.053,-0.864c-7.635,-3.529 -11.452,-7.671 -11.452,-12.424c0,-4.826 3.997,-9.076 11.992,-12.749l0.865,-0.54l85.783,-39.975c2.881,-1.296 5.005,-2.142 6.374,-2.539c1.368,-0.396 2.557,-0.594 3.565,-0.594c3.097,0 5.582,0.937 7.455,2.809c1.873,1.873 2.809,4.322 2.809,7.347c-0,2.593 -0.81,4.844 -2.431,6.752c-1.621,1.909 -4.376,3.8 -8.265,5.672l-70.333,33.385Z" fill="currentColor"/>
+			<path d="M229.7,21.068l-63.311,135.589c-1.945,4.249 -3.746,7.202 -5.402,8.859c-1.657,1.656 -3.601,2.485 -5.834,2.485c-3.314,-0 -6.249,-1.045 -8.805,-3.133c-2.557,-2.089 -3.836,-4.682 -3.836,-7.779c0,-2.089 0.972,-5.33 2.917,-9.724l0.216,-0.432l63.203,-135.373c2.017,-4.393 3.853,-7.419 5.51,-9.075c1.657,-1.657 3.601,-2.485 5.834,-2.485c3.241,-0 6.158,1.044 8.751,3.133c2.593,2.089 3.89,4.682 3.89,7.779c-0,1.296 -0.216,2.665 -0.648,4.105c-0.433,1.441 -1.261,3.458 -2.485,6.051Z" fill="currentColor"/>
+			<path d="M356.006,131.7l1.837,-0c3.889,-0 6.806,0.99 8.751,2.971c1.944,1.98 2.917,4.879 2.917,8.697c-0,4.249 -1.027,7.31 -3.079,9.183c-2.053,1.873 -5.528,2.809 -10.426,2.809l-16.53,0c-2.089,0 -3.691,-0.414 -4.808,-1.242c-1.116,-0.829 -1.674,-1.963 -1.674,-3.404l-0,-7.562c-3.53,4.825 -8.067,8.517 -13.613,11.074c-5.546,2.557 -11.777,3.835 -18.691,3.835c-14.117,0 -25.929,-4.808 -35.437,-14.423c-9.507,-9.616 -14.261,-21.626 -14.261,-36.031c-0,-14.982 4.808,-27.406 14.423,-37.274c9.616,-9.867 21.842,-14.801 36.679,-14.801c5.114,0 10.102,0.846 14.964,2.539c4.862,1.693 9.309,4.087 13.343,7.185l-0,-27.334l-14.37,-0c-4.969,-0 -8.499,-0.955 -10.587,-2.863c-2.089,-1.909 -3.133,-4.952 -3.133,-9.13c-0,-4.249 1.044,-7.31 3.133,-9.183c2.088,-1.873 5.618,-2.809 10.587,-2.809l33.601,0c2.448,0 4.123,0.504 5.023,1.513c0.901,1.008 1.351,2.881 1.351,5.618l-0,110.632Zm-50.67,-53.156c-7.059,0 -12.911,2.647 -17.557,7.941c-4.645,5.294 -6.968,12.011 -6.968,20.15c-0,8.355 2.305,15.179 6.914,20.473c4.61,5.294 10.48,7.941 17.611,7.941c7.13,-0 13.018,-2.665 17.664,-7.995c4.646,-5.33 6.968,-12.136 6.968,-20.419c0,-8.067 -2.34,-14.766 -7.022,-20.096c-4.682,-5.33 -10.552,-7.995 -17.61,-7.995Z" fill="currentColor"/>
+			<path d="M404.524,111.82c1.873,7.995 5.492,13.973 10.858,17.935c5.366,3.961 12.515,5.942 21.446,5.942c8.931,0 17.754,-2.179 26.469,-6.536c8.715,-4.358 13.973,-6.537 15.774,-6.537c2.665,0 4.844,0.991 6.536,2.971c1.693,1.981 2.539,4.52 2.539,7.617c0,6.771 -5.006,12.605 -15.017,17.502c-10.012,4.898 -22.4,7.347 -37.166,7.347c-17.43,0 -31.601,-4.898 -42.513,-14.693c-10.912,-9.796 -16.368,-22.4 -16.368,-37.814c0,-15.341 5.456,-27.91 16.368,-37.705c10.912,-9.796 25.083,-14.694 42.513,-14.694c15.558,0 28.451,4.592 38.678,13.775c10.228,9.183 15.342,20.438 15.342,33.762c-0,4.25 -1.026,7.167 -3.079,8.752c-2.053,1.584 -6.284,2.376 -12.695,2.376l-69.685,0Zm58.233,-16.854c-1.224,-6.698 -4.375,-11.884 -9.453,-15.557c-5.078,-3.674 -11.687,-5.51 -19.825,-5.51c-7.851,-0 -14.172,1.746 -18.961,5.24c-4.79,3.493 -8.121,8.769 -9.994,15.827l58.233,0Z" fill="currentColor"/>
+			<path d="M538.825,79.193l19.447,46.024l20.42,-46.024l-1.729,-0c-3.889,-0 -6.86,-1.009 -8.913,-3.025c-2.053,-2.017 -3.079,-4.97 -3.079,-8.86c-0,-4.249 1.026,-7.274 3.079,-9.075c2.053,-1.801 5.6,-2.701 10.642,-2.701l25.389,0c5.042,0 8.589,0.918 10.642,2.755c2.052,1.837 3.079,4.844 3.079,9.021c-0,3.89 -1.009,6.843 -3.025,8.86c-2.017,2.016 -4.97,3.025 -8.86,3.025l-1.836,-0l-32.088,68.172c-2.377,4.898 -4.519,7.905 -6.428,9.022c-1.909,1.116 -4.844,1.674 -8.805,1.674c-7.203,0 -12.065,-3.025 -14.586,-9.075c-0.288,-0.72 -0.504,-1.261 -0.648,-1.621l-30.143,-68.172l-1.728,-0c-3.89,-0 -6.861,-1.009 -8.914,-3.025c-2.052,-2.017 -3.079,-4.97 -3.079,-8.86c0,-4.249 1.045,-7.274 3.133,-9.075c2.089,-1.801 5.619,-2.701 10.588,-2.701l27.442,0c4.97,0 8.499,0.918 10.588,2.755c2.089,1.837 3.133,4.844 3.133,9.021c0,3.89 -1.026,6.843 -3.079,8.86c-2.053,2.016 -4.988,3.025 -8.805,3.025l-1.837,-0Z" fill="currentColor"/><path d="M706.402,87.188l-70.441,-33.385c-3.817,-1.872 -6.536,-3.763 -8.157,-5.672c-1.621,-1.908 -2.431,-4.159 -2.431,-6.752c0,-3.025 0.9,-5.474 2.701,-7.347c1.801,-1.872 4.214,-2.809 7.239,-2.809c1.152,0 2.467,0.216 3.943,0.649c1.477,0.432 3.583,1.26 6.32,2.484l85.567,39.975l0.865,0.54c7.995,3.673 11.992,7.923 11.992,12.749c0,4.825 -3.853,8.967 -11.56,12.424c-0.72,0.432 -1.297,0.72 -1.729,0.864l-85.459,39.219c-2.16,1.008 -4.015,1.728 -5.564,2.16c-1.548,0.433 -3.007,0.649 -4.375,0.649c-3.025,-0 -5.438,-0.919 -7.239,-2.755c-1.801,-1.837 -2.701,-4.304 -2.701,-7.401c0,-2.593 0.774,-4.808 2.323,-6.644c1.549,-1.837 4.304,-3.692 8.265,-5.564l70.441,-33.385Z" fill="currentColor"/>
+		</symbol>
+	</svg>
+	<script src="scripts.js" defer></script>
+</body>
+</html>
